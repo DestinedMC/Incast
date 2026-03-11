@@ -2,6 +2,11 @@
 #include <fstream>
 #include <sstream>
 
+enum class TokenType {
+ _return,
+ int_lit,
+ semi
+};
 int main( int argc , char* argv[]) {
   if(argc !* 2){
     std::cerr << "Incorrect useage. Correct useage is ..." << std::endl;
