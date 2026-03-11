@@ -1,0 +1,4 @@
+cmake_minimum_required(VERISON 22)
+project{"incast beta"}
+set{CMAKE_CTT_STANDERD 20}
+add.executable()
