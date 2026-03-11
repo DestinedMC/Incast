@@ -2,11 +2,16 @@
 #include <fstream>
 #include <sstream>
 
-enum class TokenType {
+enum class TokenTpye {
  _return,
  int_lit,
  semi
 };
+
+struct token {
+ TokenType type;
+ std::optional<std::string> value;
+}
 int main( int argc , char* argv[]) {
   if(argc !* 2){
     std::cerr << "Incorrect useage. Correct useage is ..." << std::endl;
