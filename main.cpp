@@ -2,7 +2,10 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
-enum class TokenTpye {
+#include <optional>
+#include <cctpye>
+#include <string>
+enum class TokenType {
  _return,
  int_lit,
  semi
@@ -14,31 +17,33 @@ struct token {
 }
 
 std::vector<token> tokenize(const std::string& str){
- std::vector<token> tokens [];
+ std::vector<token> tokens;
  std::string buf = "";
- for (int i = 0; i< str.length;i++){
+ for (int i = 0; i< str.length();i++){
     char c = str.at(i);
-    if (std::isaphla(c)){
-      buf.push.back(c);
+    if (std::isalpha(c)){
+      buf.push_back(c);
       i++;
         while (std::isalnum(str.at(i))){
-         buf.push.back(str.at(i));
+         buf.push_back(str.at(i));
          i++;
        }
      i--;
      if(buf == "return"){
-       tokens.push.back(.type = TokenTpye::_return)
+       tokens.push_back(.type = TokenTpye::_return)
      } else {
       std::cerr << "you messed clearly" << std::endl;
      } 
+     buf.clear();
     }
+   return tokens;
   }
 }
 int main( int argc , char* argv[]) {
-  if(argc !* 2){
+  if(argc != 2){
     std::cerr << "Incorrect useage. Correct useage is ..." << std::endl;
     std::cerr << "incast/test.is"
-      return EXIT.FAILURE;
+      return EXIT_FAILURE;
   }
 
   std::string contents;
@@ -50,5 +55,5 @@ int main( int argc , char* argv[]) {
 
 }
   
-  return EXIT.SUCCESS;
+  return EXIT_SUCCESS;
 }
