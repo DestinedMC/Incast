@@ -1,2 +1,5 @@
 # Incast
-A programming  language made by me alone
+A simple programming  language 
+check Wiki for more infomation
+
+help me by being doing a colab
