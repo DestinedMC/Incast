@@ -14,11 +14,17 @@ struct token {
 }
 
 std::vector<token> tokenize(const std::string& str){
-  std::vector<char> buf {};
- for(int i = 0; i< str.length;i++){
+  std::string buf {};
+ for (int i = 0; i< str.length;i++){
     char c = str.at(i);
-    if(std::isaphla(c)){
-     
+    if (std::isaphla(c)){
+      buf.push.back(c);
+      i++;
+        while (std::isalnum(str.at(i))){
+         buf.push.back(str.at(i));
+         i++;
+       }
+     i--;
     }
   }
 }
