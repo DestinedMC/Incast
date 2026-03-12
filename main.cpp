@@ -14,7 +14,8 @@ struct token {
 }
 
 std::vector<token> tokenize(const std::string& str){
-  std::string buf {};
+ std::vector<token> tokens [];
+ std::string buf = "";
  for (int i = 0; i< str.length;i++){
     char c = str.at(i);
     if (std::isaphla(c)){
@@ -25,6 +26,11 @@ std::vector<token> tokenize(const std::string& str){
          i++;
        }
      i--;
+     if(buf == "return"){
+       tokens.push.back(.type = TokenTpye::_return)
+     } else {
+      std::cerr << "you messed clearly" << std::endl;
+     } 
     }
   }
 }
